@@ -1,0 +1,33 @@
+*, *::after, *::before { 
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+
+  background-color: #080808;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter.ttf');
+}
+  
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

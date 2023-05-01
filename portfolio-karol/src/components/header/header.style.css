@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    height: 50px;
+
+    position: fixed;
+    top: 0;
+
+    border-bottom: 1px solid #ffffff;
+    background: #7C5ECC;
+}
+
+.header_lista {
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.header_lista-item {
+    height: 30px;
+    cursor: pointer;
+    padding: 2px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_lista-item:hover {
+    padding: 2px 2px 0;
+    border-bottom: 2px solid #ffffff;
+}
