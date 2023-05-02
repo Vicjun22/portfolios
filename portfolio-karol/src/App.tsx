@@ -6,9 +6,12 @@ export function App() {
 
   return (
     <div className={'portfolio'}>
-      <Header>
-        <Inicio />
-      </Header>
+      <Header />
+
+      <div style={{height: '50px'}} />
+
+      <Inicio />
+      <Inicio />
     </div>
   )
 }

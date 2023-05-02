@@ -1,9 +1,49 @@
 .inicio {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 50px);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
     background-image: url('../../assets/images/BG-Home.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.inicio_content {
+    width: 60%;
+    height: 100%;
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: start;
+}
+
+.inicio_hello {
+    width: 100%;
+    font-size: 300%;
+}
+
+.inicio_hello-nome, .inicio_hello-destaque {
+    color: #7C5ECC;
+}
+
+.inicio_hello-destaque::after {
+    content: '|';
+    color: #ffffff;
+    position: absolute;
+    opacity: 0;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
 }
