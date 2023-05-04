@@ -1,6 +1,6 @@
 import './App.css'
 
-import { Header, Inicio } from './components'
+import { Header, Inicio, QuemSou } from './components'
 
 export function App() {
 
@@ -8,10 +8,8 @@ export function App() {
     <div className={'portfolio'}>
       <Header />
 
-      <div style={{height: '50px'}} />
-
       <Inicio />
-      <Inicio />
+      <QuemSou />
     </div>
   )
 }

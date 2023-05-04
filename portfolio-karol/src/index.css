@@ -17,7 +17,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
 
-  background-color: #080808;
+  background-color: var(--main-white);
 }
 
 @font-face {

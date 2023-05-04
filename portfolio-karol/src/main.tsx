@@ -1,4 +1,5 @@
-import './index.css'
+import './index.css';
+import './colors.css';
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'

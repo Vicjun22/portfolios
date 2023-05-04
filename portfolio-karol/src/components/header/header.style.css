@@ -1,18 +1,15 @@
 .header {
     width: 100%;
-    height: 50px;
+    height: 150px;
 
-    position: fixed;
+    position: absolute;
     top: 0;
-
-    border-bottom: 1px solid #ffffff;
-    background: #7C5ECC;
 }
 
 .header_lista {
     width: 100%;
     height: 100%;
-    gap: 50px;
+    gap: 100px;
 
     display: flex;
     align-items: center;
@@ -22,11 +19,12 @@
 }
 
 .header_lista-item {
-    height: 30px;
+    height: 40px;
     cursor: pointer;
     padding: 2px;
 
-    color: #ffffff;
+    color: var(--main-white);
+    font-size: x-large;
     text-decoration: none;
 
     display: flex;
@@ -36,5 +34,5 @@
 
 .header_lista-item:hover {
     padding: 2px 2px 0;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid var(--main-white);
 }
