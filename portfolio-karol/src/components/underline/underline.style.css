@@ -1,0 +1,40 @@
+.underline, .underline-purple {
+    width: 120%;
+
+    position: relative;
+    border-bottom: 1px solid var(--main-white);
+}
+
+.underline-purple {
+    border-bottom: 1px solid var(--main-purple);
+}
+
+.underline::before,
+.underline-purple::before,
+.underline::after,
+.underline-purple::after {
+    width: 10px;
+    height: 10px;
+    content: "";
+
+    position: absolute;
+    top: -4px;
+
+    background-color: var(--main-white);
+    border-radius: 100%;
+}
+
+.underline-purple::before,
+.underline-purple::after {
+    background-color: var(--main-purple);
+}
+
+.underline::before,
+.underline-purple::before {
+    left: -4px;
+}
+
+.underline::after,
+.underline-purple::after {
+    right: -4px;
+}
