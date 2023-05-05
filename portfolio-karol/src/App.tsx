@@ -10,8 +10,7 @@ export function App() {
 
       <div className={'portfolio_container'}>
         <Inicio />
-        <QuemSou />
-        <QuemSou />
+        {/* <QuemSou /> */}
       </div>
     </div>
   )

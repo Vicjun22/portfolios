@@ -14,6 +14,7 @@ export function Header() {
     ]
 
     const [openHeader, setOpenHeader] = useState<boolean>(false);
+    let mobile: boolean = window.innerWidth <= 1000;
 
     const cabecalho = listaDeCabecalho.map((item: { nome: string, href: string }) => {
         return (
@@ -27,7 +28,7 @@ export function Header() {
 
     return (
         <>
-            {openHeader ?
+            {(mobile && openHeader) &&
                 <header className={`header ${'header_' + openHeader}`}>
                     <button className={'header_btn-cross'} onClick={() => setOpenHeader(!openHeader)}>
                         <Cross1Icon style={{ width: '30px', height: '30px', color: 'var(--main-purple)' }} />
@@ -37,7 +38,8 @@ export function Header() {
                         {cabecalho}
                     </ul>
                 </header>
-                :
+            }
+            {(mobile && !openHeader) &&
                 <button className={'header_btn-hamburger'} onClick={() => setOpenHeader(!openHeader)}>
                     <HamburgerMenuIcon 
                         style={{
@@ -48,6 +50,13 @@ export function Header() {
                         }}
                     />
                 </button>
+            }
+            {!mobile &&
+                <header className={'header'}>
+                    <ul className={'header_lista'}>
+                        {cabecalho}
+                    </ul>
+                </header>
             }
         </>
     )
