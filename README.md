@@ -21,8 +21,8 @@
               </small>
             </p>
           </th>
-          <th align="center"
-            <img width="500" height="1"> 
+          <th align="center">
+            <img width="300" height="1"> 
             <p> 
               <small>
                 Preview
