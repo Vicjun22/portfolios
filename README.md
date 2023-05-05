@@ -33,7 +33,11 @@
       </thead>
       <tbody>
         <tr>
-          <td align="center"><a href="portfolio-karol">Karoline Lemes Vaz</a></td>
+          <td align="center">
+            <a href="portfolio-karol">Karoline Lemes Vaz</a>
+            <br>
+            <a href="https://vj22-portfolio-karoline.vercel.app/">Link</a>
+          </td>
           <td align="center">
             <a href="https://github.com/Karolvaz" target="_blank">
               <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" target="_blank">
