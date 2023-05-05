@@ -1,7 +1,7 @@
-# Portfolios
+# Portfólios
 
 <p align="center">
-  Projetos Portfólios criados sob demanda utilizando React + Vite<br>
+  Portfólios com responsividade criados sob demanda utilizando React + Vite<br>
   <table>
       <thead>
         <tr>
