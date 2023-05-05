@@ -35,8 +35,6 @@
         <tr>
           <td align="center">
             <a href="portfolio-karol">Karoline Lemes Vaz</a>
-            <br>
-            <a href="https://vj22-portfolio-karoline.vercel.app/">Link</a>
           </td>
           <td align="center">
             <a href="https://github.com/Karolvaz" target="_blank">
@@ -48,7 +46,8 @@
             </a>
           </td>
           <td align="center">
-            <a href="portfolio-karol" height="1px"><img width="600px" src="portfolio-karol/.github/preview.png" /></a>
+            <a href="https://vj22-portfolio-karoline.vercel.app/" height="1px"><img width="600px" src="portfolio-karol/.github/preview.png" /></a>
+            <p>Clique na imagem para acessar o portifólio</p>
           </td>
         </tr> 
       </tbody>   
