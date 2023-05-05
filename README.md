@@ -13,19 +13,19 @@
               </small>
             </p>
           </th>
-          <th align="center"
-            <img width="300" height="1"> 
-            <p> 
+          <th align="center">
+            <img width="300" height="1">
+            <p>
               <small>
-                Mobile Preview
+                Mais informações
               </small>
             </p>
           </th>
-          <th align="center">
-            <img width="300" height="1"> 
+          <th align="center"
+            <img width="500" height="1"> 
             <p> 
               <small>
-                Web Preview
+                Preview
               </small>
             </p>
           </th>
@@ -35,10 +35,16 @@
         <tr>
           <td align="center"><a href="portfolio-karol">Karoline Lemes Vaz</a></td>
           <td align="center">
-            <a href="01" height="1px"><img width="300px" src="portfolio-karol/.github/mobile-preview.png" /></a>
+            <a href="https://github.com/Karolvaz" target="_blank">
+              <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" target="_blank">
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/karolinelemesvaz/" target="_blank">
+              <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkdIn" target="_blank">
+            </a>
           </td>
           <td align="center">
-            <a href="01"><img width="300px" src="portfolio-karol/.github/web-preview.png" /></a>
+            <a href="portfolio-karol" height="1px"><img width="600px" src="portfolio-karol/.github/preview.png" /></a>
           </td>
         </tr> 
       </tbody>   
