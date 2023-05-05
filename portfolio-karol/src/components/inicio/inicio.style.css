@@ -28,6 +28,12 @@
     font-weight: 200;
 }
 
-/* @media screen and (max-width: 1000px) {
-
-} */
+@media screen and (max-width: 1000px) {
+    .inicio_titulo {
+        font-size: 200%;
+    }
+    
+    .inicio_subtitulo {
+        font-size: 150%;
+    }
+}

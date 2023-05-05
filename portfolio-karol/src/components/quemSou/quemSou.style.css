@@ -54,3 +54,31 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 1000px) {
+    .quem-sou {
+        flex-direction: column;
+    }
+
+    .quem-sou_img {
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+    }
+
+    .quem-sou_content {
+        width: 100%;
+        height: 50%;
+        padding: 0 40px;
+
+        font-size: large;
+        text-align: center;
+        font-weight: 400;
+
+        align-items: center;
+    }
+
+    .quem-sou_titulo {
+        width: 80%;
+    }
+}

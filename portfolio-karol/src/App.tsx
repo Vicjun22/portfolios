@@ -10,7 +10,7 @@ export function App() {
 
       <div className={'portfolio_container'}>
         <Inicio />
-        {/* <QuemSou /> */}
+        <QuemSou />
       </div>
     </div>
   )
