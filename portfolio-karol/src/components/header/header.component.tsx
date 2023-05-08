@@ -1,7 +1,7 @@
 import './header.style.css';
 
 import { Link } from 'react-scroll';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 
 export function Header() {
@@ -11,10 +11,9 @@ export function Header() {
         { nome: 'Design Gráfico', href: 'design-grafico' },
         { nome: 'Web Design', href: 'web-design' },
         { nome: 'Contato', href: 'contato' }
-    ]
+    ];
 
     const [openHeader, setOpenHeader] = useState<boolean>(false);
-    let mobile: boolean = window.innerWidth <= 1000;
 
     const cabecalho = listaDeCabecalho.map((item: { nome: string, href: string }) => {
         return (
@@ -26,22 +25,36 @@ export function Header() {
         )
     })
 
+    function handleFecharHeader(event: any) {
+        event.preventDefault();
+        setOpenHeader(false);
+    }
+
+    function handleAbrirHeader(event: any) {
+        event.preventDefault();
+        setOpenHeader(true);
+    }
+
+    useEffect(() => {
+        function handleResize() {
+            const isMobile = window.innerWidth <= 1000;
+            setOpenHeader(!isMobile);
+        }
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
-            {(mobile && openHeader) &&
-                <header className={`header ${'header_' + openHeader}`}>
-                    <button className={'header_btn-cross'} onClick={() => setOpenHeader(!openHeader)}>
-                        <Cross1Icon style={{ width: '30px', height: '30px', color: 'var(--main-purple)' }} />
-                    </button>
-
-                    <ul className={'header_lista'}>
-                        {cabecalho}
-                    </ul>
-                </header>
-            }
-            {(mobile && !openHeader) &&
-                <button className={'header_btn-hamburger'} onClick={() => setOpenHeader(!openHeader)}>
-                    <HamburgerMenuIcon 
+            {!openHeader ?
+                <button className={'header_btn-hamburger'} onClick={(event) => handleAbrirHeader(event)}>
+                    <HamburgerMenuIcon
                         style={{
                             width: '50px',
                             height: '50px',
@@ -50,9 +63,17 @@ export function Header() {
                         }}
                     />
                 </button>
-            }
-            {!mobile &&
-                <header className={'header'}>
+                :
+                <header className={!openHeader ? 'header header-close' : 'header'}>
+                    <button className={'header_btn-cross'} onClick={(event) => handleFecharHeader(event)}>
+                        <Cross1Icon
+                            style={{
+                                width: '30px',
+                                height: '30px',
+                                color: 'var(--main-purple)'
+                            }}
+                        />
+                    </button>
                     <ul className={'header_lista'}>
                         {cabecalho}
                     </ul>
