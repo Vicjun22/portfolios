@@ -46,7 +46,7 @@
             </a>
           </td>
           <td align="center">
-            <a href="https://vj22-portfolio-karoline.vercel.app/" height="1px"><img width="600px" src="portfolio-karol/.github/preview.png" /></a>
+            <a href="https://portfolios-livid-ten.vercel.app/" height="1px"><img width="600px" src="portfolio-karol/.github/preview.png" /></a>
             <p>Clique na imagem para acessar o portifólio</p>
           </td>
         </tr> 
