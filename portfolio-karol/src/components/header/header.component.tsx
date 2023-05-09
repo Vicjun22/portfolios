@@ -4,15 +4,7 @@ import { Link } from 'react-scroll';
 import { useEffect, useState } from 'react';
 import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons';
 
-export function Header() {
-    const listaDeCabecalho: { nome: string, href: string }[] = [
-        { nome: 'Início', href: 'inicio' },
-        { nome: 'Quem sou', href: 'quem-sou' },
-        { nome: 'Design Gráfico', href: 'design-grafico' },
-        { nome: 'Web Design', href: 'web-design' },
-        { nome: 'Contato', href: 'contato' }
-    ];
-
+export function Header({listaDeCabecalho}: any) {
     const [openHeader, setOpenHeader] = useState<boolean>(false);
     const [firstOpening, setFirstOpening] = useState<boolean>(true);
 

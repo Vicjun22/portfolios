@@ -3,10 +3,10 @@ import './quemSou.style.css';
 import Photo from '../../assets/images/Karol-Photo.svg';
 import { Underline } from '..';
 
-export function QuemSou() {
+export function QuemSou({componentID}: any) {
 
     return (
-        <section id='quem-sou' className={'quem-sou'}>
+        <section id={componentID} className={'quem-sou'}>
             <div className={'quem-sou_img'}>
                 <img src={Photo} alt={'Foto Karol'} className={'quem-sou_foto'} />
             </div>
