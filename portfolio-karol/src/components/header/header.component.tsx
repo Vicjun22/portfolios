@@ -14,6 +14,7 @@ export function Header() {
     ];
 
     const [openHeader, setOpenHeader] = useState<boolean>(false);
+    const [firstOpening, setFirstOpening] = useState<boolean>(true);
 
     const cabecalho = listaDeCabecalho.map((item: { nome: string, href: string }) => {
         return (
@@ -23,22 +24,29 @@ export function Header() {
                 </Link>
             </li>
         )
-    })
+    });
 
-    function handleFecharHeader(event: any) {
+    function handleOpenHandler(event: any) {
         event.preventDefault();
-        setOpenHeader(false);
-    }
-
-    function handleAbrirHeader(event: any) {
-        event.preventDefault();
+        if (firstOpening) {
+            setFirstOpening(false)
+        }
         setOpenHeader(true);
-    }
+    };
+
+    function handleCloseHandler(event: any) {
+        event.preventDefault();
+        if (firstOpening) {
+            setFirstOpening(false)
+        }
+        setOpenHeader(false);
+    };
 
     useEffect(() => {
         function handleResize() {
             const isMobile = window.innerWidth <= 1000;
             setOpenHeader(!isMobile);
+            setFirstOpening(true);
         }
 
         handleResize();
@@ -52,20 +60,20 @@ export function Header() {
 
     return (
         <>
-            {!openHeader ?
-                <button className={'header_btn-hamburger'} onClick={(event) => handleAbrirHeader(event)}>
-                    <HamburgerMenuIcon
-                        style={{
-                            width: '50px',
-                            height: '50px',
-                            padding: '10px',
-                            color: 'var(--main-purple)'
-                        }}
-                    />
-                </button>
-                :
-                <header className={!openHeader ? 'header header-close' : 'header'}>
-                    <button className={'header_btn-cross'} onClick={(event) => handleFecharHeader(event)}>
+            <button className={'header_btn-hamburger'} onClick={(e) => handleOpenHandler(e)}>
+                <HamburgerMenuIcon
+                    style={{
+                        width: '50px',
+                        height: '50px',
+                        padding: '10px',
+                        color: 'var(--main-purple)'
+                    }}
+                />
+            </button>
+            
+            <header className={!openHeader ? `header-close_${firstOpening}` : 'header'}>
+                { openHeader &&
+                    <button className={'header_btn-cross'} onClick={(e) => handleCloseHandler(e)}>
                         <Cross1Icon
                             style={{
                                 width: '30px',
@@ -74,11 +82,9 @@ export function Header() {
                             }}
                         />
                     </button>
-                    <ul className={'header_lista'}>
-                        {cabecalho}
-                    </ul>
-                </header>
-            }
+                }
+                <ul className={'header_lista'}>{cabecalho}</ul>
+            </header>
         </>
     )
 }

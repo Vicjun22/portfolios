@@ -9,7 +9,7 @@
 .header_lista {
   width: 100%;
   height: 100%;
-  gap: 100px;
+  gap: 80px;
 
   display: flex;
   align-items: center;
@@ -43,7 +43,8 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .header {
+  .header,
+  .header-close_false {
     width: 70%;
     height: 100%;
     padding: 80px 8%;
@@ -54,16 +55,27 @@
     justify-content: space-evenly;
 
     position: fixed;
+    top: 0;
     z-index: 10;
 
     border-right: 3px solid var(--main-purple);
     background-color: var(--main-bg);
+  }
+
+  .header {
     animation: openMenu 0.5s 1;
   }
 
-  .header-close {
-    animation: closeMenu 0.5s 1;
+  .header-close_true {
+    display: none;
   }
+
+  .header-close_false {
+    animation: closeMenu 0.5s 1;
+    
+    transform: translateX(-100%);
+  }
+
 
   .header_btn-cross,
   .header_btn-hamburger {
