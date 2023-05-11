@@ -69,7 +69,7 @@
     width: 200px;
     padding: 50px;
 
-    filter: brightness(0.6);
+    filter: brightness(0.8);
     border: 2px solid var(--main-purple);
     border-radius: 35px;
     background-color: var(--main-purple-transparent-30);
