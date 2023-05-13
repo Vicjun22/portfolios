@@ -1,0 +1,1 @@
+export const programasERecursos: string[] = ['Figma', 'CorelDRAW', 'Photoshop'];
