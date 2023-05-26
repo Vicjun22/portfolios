@@ -16,9 +16,11 @@ export function App() {
       <Header listaDeCabecalho={listaDeCabecalho} />
 
       <div className={'portfolio_container'}>
+
         <Inicio componentID={listaDeCabecalho[0].href} />
         <QuemSou componentID={listaDeCabecalho[1].href} />
         <Projetos componentID={listaDeCabecalho[2].href} />
+        
       </div>
     </div>
   )
