@@ -1,6 +1,6 @@
 import './App.css'
 
-import { Header, Inicio, Projetos, QuemSou } from './components'
+import { Contato, Header, Inicio, Projetos, QuemSou } from './components'
 
 export function App() {
   const listaDeCabecalho: { nome: string, href: string }[] = [
@@ -20,6 +20,7 @@ export function App() {
         <Inicio componentID={listaDeCabecalho[0].href} />
         <QuemSou componentID={listaDeCabecalho[1].href} />
         <Projetos componentID={listaDeCabecalho[2].href} />
+        <Contato componentID={listaDeCabecalho[4].href} />
         
       </div>
     </div>
